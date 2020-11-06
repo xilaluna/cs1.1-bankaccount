@@ -20,3 +20,7 @@ class BankAccount:
         else:
             self.balance -= 10
             print(f'Insufficient funds')
+
+    def get_balance(self):
+        print(f'You have a balance of {self.balance}')
+        return self.balance
