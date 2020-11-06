@@ -31,3 +31,11 @@ class BankAccount:
 
     def print_receipt(self):
         print(f'{self.full_name}\n Account No: {self.account_number}\n Routing No: {self.routing_number}\n Balance: {self.balance}')
+
+
+xila_luna = BankAccount('Xila Luna', 12345678, 87654321, 2000)
+xila_luna.deposit(20.01)
+xila_luna.withdraw(10)
+xila_luna.add_interest()
+xila_luna.get_balance()
+xila_luna.print_receipt()
