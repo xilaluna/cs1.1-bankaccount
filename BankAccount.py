@@ -1,13 +1,16 @@
+from random import randint
+
+
 class BankAccount:
     """
     initializes a users bank account and actions.
     """
+    __routing_number = 12345678
 
-    def __init__(self, full_name, account_number, routing_number, balance):
+    def __init__(self, full_name):
         self.full_name = full_name
-        self.__account_number = account_number
-        self.__routing_number = routing_number
-        self.__balance = balance
+        self.__account_number = randint(10000000, 99999999)
+        self.__balance = 0
 
     def deposit(self, amount):
         self.__balance += amount
@@ -34,8 +37,8 @@ class BankAccount:
             f' {self.full_name}\n Account No: ****{str(self.__account_number)[4:]}\n Routing No: {self.__routing_number}\n Balance: {self.__balance}')
 
 
-xila_luna = BankAccount('Xila Luna', 12345678, 87654321, 100)
-xila_luna.deposit(20.50)
+xila_luna = BankAccount('Xila Luna')
+xila_luna.deposit(20.59)
 xila_luna.withdraw(10)
 xila_luna.add_interest()
 xila_luna.get_balance()
